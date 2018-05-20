@@ -1,0 +1,32 @@
+--created by Emanuel Franklyn --
+--Name:Computercraft communication to windows --
+--date of create:20/05/2018 -- 
+--language: portuguese brazil(brasil) and english --
+
+function receiver(user,repo,pastname)
+--verify if github file exists--
+if fs.exists("github") == false then
+shell.run("pastebin get p8PJVxC4 github")
+end
+
+term.clear()
+term.setBackgroundColor(colors.lightGray)
+term.setCursorPos(1,1)
+term.setTextColor(colors.red)
+term.write("baixando(dowloading) arquivos(files) de(from):")
+term.setTextColor(colors.blue)
+term.write(" "..repo)
+term.setTextColor(colors.red)
+term.write(" de(of) ")
+term.setTextColor(colors.blue)
+term.write(user)
+term.setTextColor(colors.red)
+
+--dowload files--
+noname1 = shell.run("github clone "..user.."/"..repo.." "..pastname)
+if noname1 = false then
+print("Ocorreu(occurred) um(a) erro(error)")
+else
+term.write(os(the) arquivos(files) foram(are) baixados(dowload)
+end
+end
